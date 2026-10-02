@@ -1,0 +1,29 @@
+{
+  "name": "travelguide",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "predev": "node scripts/fetch-assets.mjs",
+    "build": "next build",
+    "prebuild": "node scripts/fetch-assets.mjs",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "engines": { "node": ">=20.0.0" },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.23.12",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.2"
+  }
+}
