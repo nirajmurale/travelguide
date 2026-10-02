@@ -1,0 +1,4 @@
+import { Reveal } from "@/components/motion/Reveal";
+export function Section({ eyebrow, title, intro, children, className="", id }: { eyebrow?: string; title: string; intro?: string; children: React.ReactNode; className?: string; id?: string }) {
+  return <section id={id} className={`mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28 ${className}`}><Reveal><div className="max-w-2xl">{eyebrow && <p className="eyebrow mb-3 text-terracotta">{eyebrow}</p>}<h2 className="font-heading text-balance text-4xl leading-[1.05] text-maroon sm:text-5xl">{title}</h2>{intro && <p className="mt-5 max-w-xl text-base leading-7 text-ink/70 sm:text-lg">{intro}</p>}</div></Reveal>{children}</section>;
+}
