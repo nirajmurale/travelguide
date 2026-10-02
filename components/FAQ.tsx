@@ -1,0 +1,6 @@
+"use client";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { faqs } from "@/lib/content";
+export function FAQ(){ const [open,setOpen]=useState<number|null>(0); return <div className="mt-10 grid gap-3">{faqs.map((item,i)=><div key={item.q} className="rounded-2xl border border-maroon/10 bg-white"><button onClick={()=>setOpen(open===i?null:i)} className="flex min-h-16 w-full items-center justify-between gap-5 px-5 text-left font-semibold text-maroon sm:px-6" aria-expanded={open===i}><span>{item.q}</span><ChevronDown size={19} className={`shrink-0 transition-transform ${open===i?'rotate-180':''}`}/></button><AnimatePresence initial={false}>{open===i&&<motion.div initial={{height:0,opacity:0}} animate={{height:'auto',opacity:1}} exit={{height:0,opacity:0}} transition={{duration:.3}} className="overflow-hidden"><p className="px-5 pb-6 text-sm leading-6 text-ink/70 sm:px-6">{item.a}</p></motion.div>}</AnimatePresence></div>)}</div>; }
